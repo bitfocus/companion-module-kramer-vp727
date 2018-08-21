@@ -310,7 +310,7 @@ instance.prototype.actions = function(system) {
 
 	}
 
-
+ 
 };
 
 instance.module_info = {
