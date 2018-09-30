@@ -310,13 +310,6 @@ instance.prototype.actions = function(system) {
 
 	}
 
- 
-};
-
-instance.module_info = {
-	label: 'Kramer VP-727 xl',
-	id: 'kramer-vp727',
-	version: '0.0.1'
 };
 
 instance_skel.extendedBy(instance);
