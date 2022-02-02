@@ -1,7 +1,9 @@
 {
 	"name": "kramer-vp727",
-	"legacy": ["vp727"],
-	"version": "1.0.1",
+	"legacy": [
+		"vp727"
+	],
+	"version": "1.0.2",
 	"api_version": "1.0.0",
 	"keywords": [
 		"Image Processing"
