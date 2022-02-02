@@ -17,6 +17,13 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Per Røine <per.roine@gmail.com>",
-	"homepage": "https://www.kramerav.com/Product/VP-747",
-	"license": "MIT"
+	"homepage": "https://github.com/bitfocus/companion-module-kramer-vp727#readme",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/bitfocus/companion-module-kramer-vp727/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-kramer-vp727.git"
+	}
 }
