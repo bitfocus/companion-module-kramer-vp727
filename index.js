@@ -212,7 +212,33 @@ instance.prototype.actions = function(system) {
 						 ]
 				}
 			]
+		},				
+		'VideoType':     {
+			label: 'Video Type',
+			options: [
+				{
+					type: 'dropdown',
+					 label: 'Video Type',
+						 id: 'vidtype',
+						 choices: [
+							 { id: '0', label: 'RGBHV'},
+							 { id: '1', label: 'RGBS (PC)'},
+							 { id: '2', label: 'RGsB (PC)'},
+							 { id: '3', label: 'ED/HD Component'},
+							 { id: '4', label: 'SD Component'},
+							 { id: '5', label: 'RGBS (Video)'},
+							 { id: '6', label: 'RGsB (Video)'},
+							 { id: '7', label: 'Y/C'},
+							 { id: '8', label: 'Video'},
+							 { id: '9', label: 'HDMI'}											 
+						 ]
+				}
+
+			]
 		},
+		
+		
+		
 		/*
 		'command':   {
 			label: 'Command',
@@ -288,6 +314,10 @@ instance.prototype.actions = function(system) {
 				cmd = 'Y 0 146 '+ opt.transId;
 				break;
 
+			case 'VideoType':                
+                		cmd = 'Y 0 95 '+ opt.vidtype;				
+				break; 
+				
 			case 'command':
 				cmd = opt.comId;
 				break;
@@ -295,19 +325,13 @@ instance.prototype.actions = function(system) {
 	};
 
 
-
-
-
 	if (cmd !== undefined) {
-
-		debug('sending ',cmd,"to",self.config.host);
-
+		debug('sending cmd ',cmd,"to",self.config.host);
 		if (self.socket !== undefined && self.socket.connected) {
 			self.socket.send(cmd + '\n');
 		} else {
 			debug('Socket not connected :(');
 		}
-
 	}
 
 };
